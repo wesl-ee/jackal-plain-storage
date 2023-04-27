@@ -1,0 +1,16 @@
+[package]
+name = "jackal-pub-storage"
+version = "0.1.0"
+authors = [ "Wesley Coakley <w@wesl.ee>" ]
+edition = "2018"
+
+[dependencies]
+cosmwasm-std = "1.0.0"
+cosmwasm-storage = "1.0.0"
+cw-storage-plus = "0.13.2"
+schemars = "0.8.8"
+serde = { version = "1.0.137", default-features = false, features = ["derive"] }
+thiserror = { version = "1.0.31" }
+
+[dev-dependencies]
+cosmwasm-schema = { version = "1.0.0" }
