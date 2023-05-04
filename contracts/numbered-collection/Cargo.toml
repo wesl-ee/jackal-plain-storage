@@ -29,6 +29,7 @@ cw2 = "0.13.2"
 schemars = "0.8.8"
 serde = { version = "1.0.137", default-features = false, features = ["derive"] }
 thiserror = { version = "1.0.31" }
+semver = "1.0.10"
 jackal-pub-storage = { path = "../../packages/jackal-pub-storage" }
 
 [dev-dependencies]

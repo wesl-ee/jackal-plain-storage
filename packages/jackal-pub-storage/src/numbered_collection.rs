@@ -23,8 +23,12 @@ pub mod msg {
     #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
     #[serde(rename_all = "snake_case")]
     pub enum QueryMsg {
+        BlockInfo {},
         Config {},
     }
+
+    #[derive(Serialize, Deserialize, Clone, Debug, JsonSchema)]
+    pub struct MigrateMsg {}
 }
 
 pub mod response {
