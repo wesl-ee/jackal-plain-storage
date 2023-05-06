@@ -7,14 +7,14 @@ pub enum JackalMsg {
         creator: String,
         for_address: String,
         duration: String,
-        bytes: String, 
+        bytes: String,
         payment_denom: String,
     },
     SignContract {
         creator: String,
         cid: String,
         pay_once: bool,
-    }
+    },
 }
 
 impl From<JackalMsg> for CosmosMsg<JackalMsg> {

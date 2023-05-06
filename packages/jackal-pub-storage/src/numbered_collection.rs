@@ -21,18 +21,14 @@ pub mod msg {
     #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
     #[serde(rename_all = "snake_case")]
     pub enum ExecuteMsg {
-        Store {
-            cid_map: Vec<(u32, String)>,
-        },
-        RenewCollection { },
+        Store { cid_map: Vec<(u32, String)> },
+        RenewCollection {},
     }
 
     #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
     #[serde(rename_all = "snake_case")]
     pub enum QueryMsg {
-        Item {
-            index: Vec<u32>,
-        },
+        Item { token_id: Vec<u32> },
         Config {},
     }
 
@@ -48,10 +44,10 @@ pub mod response {
     #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
     #[serde(rename_all = "snake_case")]
     pub struct QueryItem {
-        pub index: u32,
+        pub token_id: u32,
         pub cid: String,
         // TODO The burden should not be put on the client to do this. Queries
-        // should be handled by a custom chain indexer (that is not in-scope of
+        // should be handled by a custom chain token_ider (that is not in-scope of
         // this contract, however)
         pub provider: Vec<String>,
     }
