@@ -83,12 +83,26 @@ dependencies = [
 
 [[package]]
 name = "cosmwasm-schema"
-version = "1.0.0"
+version = "1.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "772e80bbad231a47a2068812b723a1ff81dd4a0d56c9391ac748177bea3a61da"
+checksum = "0f00b363610218eea83f24bbab09e1a7c3920b79f068334fdfcc62f6129ef9fc"
 dependencies = [
+ "cosmwasm-schema-derive",
  "schemars",
+ "serde",
  "serde_json",
+ "thiserror",
+]
+
+[[package]]
+name = "cosmwasm-schema-derive"
+version = "1.2.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ae38f909b2822d32b275c9e2db9728497aa33ffe67dd463bc67c6a3b7092785c"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -399,10 +413,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "112c678d4050afce233f4f2852bb2eb519230b3cf12f33585275537d7e41578d"
 
 [[package]]
-name = "jackal-pub-storage"
+name = "jackal-bindings"
 version = "0.1.0"
 dependencies = [
  "cosmwasm-schema",
+ "cosmwasm-std",
+ "cosmwasm-storage",
+ "cw-storage-plus",
+ "schemars",
+ "serde",
+ "thiserror",
+]
+
+[[package]]
+name = "jackal-pub-storage"
+version = "0.1.0"
+dependencies = [
  "cosmwasm-std",
  "cosmwasm-storage",
  "cw-storage-plus",
@@ -440,6 +466,7 @@ dependencies = [
  "cw-multi-test",
  "cw-storage-plus",
  "cw2",
+ "jackal-bindings",
  "jackal-pub-storage",
  "schemars",
  "semver",

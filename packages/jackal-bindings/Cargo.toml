@@ -1,5 +1,5 @@
 [package]
-name = "jackal-pub-storage"
+name = "jackal-bindings"
 version = "0.1.0"
 authors = [ "Wesley Coakley <w@wesl.ee>" ]
 edition = "2018"
@@ -11,3 +11,6 @@ cw-storage-plus = "0.13.2"
 schemars = "0.8.8"
 serde = { version = "1.0.137", default-features = false, features = ["derive"] }
 thiserror = { version = "1.0.31" }
+cosmwasm-schema = { version = "1.1" }
+
+[dev-dependencies]
